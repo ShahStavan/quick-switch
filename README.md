@@ -2,6 +2,8 @@
 
 This script allows you to easily open Command Prompt sessions in specified directories (e.g., `D:\Projects` and `D:\Practice`) using an interactive selection tool called `fzf`. It's designed for Windows and helps streamline your workflow by managing multiple project directories.
 
+![](https://github.com/Dev-Mehta/quick-switch/blob/master/screenshots/fuzzy-find-dirs.png)
+
 ## Inspiration
 
 This script is inspired by [tmux-sessionizer](https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/scripts/tmux-sessionizer) from ThePrimeagen's dotfiles repository. While it originally utilized `tmux`, this version focuses on leveraging Windows' built-in features.
