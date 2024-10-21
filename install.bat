@@ -26,16 +26,12 @@ if errorlevel 1 (
 rem Check if fzf is installed
 where fzf >nul 2>&1
 if errorlevel 1 (
-    echo fzf not found. Installing fzf...
+    echo fzf not found.
+    echo Please install fzf using the following command:
+    echo winget install fzf
 
-    rem Download and install fzf for Windows
-    powershell -Command "Start-BitsTransfer -Source https://github.com/junegunn/fzf-bin/releases/latest/download/fzf.exe -Destination %INSTALL_DIR%\fzf.exe"
-
-    if exist "%INSTALL_DIR%\fzf.exe" (
-        echo fzf successfully installed.
-    ) else (
-        echo Failed to install fzf. Please install it manually from https://github.com/junegunn/fzf
-    )
+    echo If that doesn't work you can install it manually.
+    echo Checkout https://github.com/junegunn/fzf for detailed guide on installation of fzf.
 ) else (
     echo fzf is already installed.
 )
