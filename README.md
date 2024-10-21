@@ -1,4 +1,4 @@
-# Start Session Script
+# Quick Switch through your project directories
 
 This script allows you to easily open Command Prompt sessions in specified directories (e.g., `D:\Projects` and `D:\Practice`) using an interactive selection tool called `fzf`. It's designed for Windows and helps streamline your workflow by managing multiple project directories.
 
