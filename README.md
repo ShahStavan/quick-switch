@@ -27,11 +27,20 @@ To install the script, follow these steps:
 cd quick-switch
 ```
 
-3. Run the installation script:
+3. After you have cloned the repo, open text editor of your choice and put your work directories in `quick-switch.bat`.
+```
+for /f "delims=" %%i in ('dir /b /ad "D:\Projects" "D:\Practice" ^| fzf') do (
+     set "selected=D:\Projects\%%i"
+     if not exist "!selected!" set "selected=D:\Practice\%%i"
+ )
+```
+
+4. Run the installation script:
 
 ```bash
 install.bat
 ```
+
 
 This will copy the quick-switch.bat script to a directory in your Path, check for and install fzf, and add necessary paths if needed.
 
@@ -47,4 +56,4 @@ If no arguments are provided, the script will prompt you to select a directory. 
 
 ## Dependencies
 
-fzf: A command-line fuzzy finder. The installation script will download and install fzf automatically.
+[fzf](https://github.com/junegunn/fzf): A command-line fuzzy finder. The installation script will download and install fzf automatically.
