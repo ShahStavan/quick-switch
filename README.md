@@ -56,6 +56,24 @@ quick-switch
 
 If no arguments are provided, the script will prompt you to select a directory. You can also provide a specific directory as an argument.
 
+## Faster...
+
+Okay this is nice, we have fuzzy finding through directories for windows, but I don't want to type `quick-switch` everytime I want to change to a directory. I got you.
+
+Do this. Open up a command prompt. 
+```bash
+cd %USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\
+mkdir _hotkeys
+cd _hotkeys
+explorer .
+```
+
+What we have just done is we have created a `_hotkeys` directory in the `Start Menu`. This way you can create a shortcut here that links to quick-switch. When you open the file explorer in the `_hotkeys` directory to the following steps to create a shortcut.
+
+**Right click anywhere on the empty space > New > Shortcut**, when it prompts you for a location enter `%USERPROFILE%\bin\quick-switch.bat`. Create the shortcut. Right click on the shortcut, go to properties and set your desired hotkey in `Shortcut key` field. I have set it to `Ctrl + Shift + M`. Now I can press `Ctrl + Shift + M` from anywhere and quick-switch will open up. 
+
+![image](https://github.com/user-attachments/assets/379e649e-92f9-4bf7-840d-f43693c460fd)
+
 ## Dependencies
 
 [fzf](https://github.com/junegunn/fzf): A command-line fuzzy finder. The installation script will download and install fzf automatically.
